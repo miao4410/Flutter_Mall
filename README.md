@@ -10,11 +10,8 @@ UI原型图：https://www.figma.com/file/7KPVVTkHPQF0rZq9czIY8h/%E9%9D%9E%E5%90%
 
 后端接口文档：https://console-docs.apipost.cn/preview/20afd15b239de091/e7c99b3f94b847f8
 
-
-
-
-
 此应用用到的插件 为pull_to_refresh（上拉加载）flutter_easyloading （加载插件）
+![图片描述](https://github.com/miao4410/mall/blob/main/mall.gif)
 
 gif较大(5MB) 刚开始加载偏卡顿 登陆页曾在YouTuBe上看到的（感觉很好看） 就借鉴拿了过来 UI原型图的登陆页也保留着。
 
@@ -25,4 +22,4 @@ gif较大(5MB) 刚开始加载偏卡顿 登陆页曾在YouTuBe上看到的（感
 
 
 
-![图片描述](https://github.com/miao4410/mall/blob/main/mall.gif)
+
