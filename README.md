@@ -1,16 +1,16 @@
 # Mall
 
-一个基于flutter2.5的商城
+一个基于flutter2.5的商城 项目结构不是很复杂 适合新手小白 2021年3月份开始弄的 所以版本略低 之前一直放在了Gitee上 现在准备搬到GitHub上。
 
 ## Getting Started
 
 UI原型图：https://www.figma.com/file/7KPVVTkHPQF0rZq9czIY8h/%E9%9D%9E%E5%90%8C%E4%BA%8C%E6%9C%9F_Block2.2.0?node-id=1273%3A12512
 
-后端语言： java ，框架springboot。
+后端语言：java ，框架springboot （基本简单的增删改查 没意义做参考）。
 
 后端接口文档：https://console-docs.apipost.cn/preview/20afd15b239de091/e7c99b3f94b847f8
 
-此应用用到的插件 为pull_to_refresh（上拉加载）flutter_easyloading （加载插件）
+此应用用到的插件 为pull_to_refresh（滑动加载）flutter_easyloading （页面加载插件）
 ![图片描述](https://github.com/miao4410/mall/blob/main/mall.gif)
 
 gif较大(5MB) 刚开始加载偏卡顿 登陆页曾在YouTuBe上看到的（感觉很好看） 就借鉴拿了过来 UI原型图的登陆页也保留着。
