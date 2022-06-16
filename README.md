@@ -25,4 +25,4 @@ gif较大(5MB) 刚开始加载偏卡顿 登陆页曾在YouTuBe上看到的（感
 
 
 
-![图片描述](http://mall.miaoxing.fun/file/mall/gif/mall.gif)
+![图片描述](https://github.com/miao4410/mall/blob/main/mall.gif)
