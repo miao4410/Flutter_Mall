@@ -1,5 +1,4 @@
 import 'package:extended_image/extended_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PhotoBrowsePage extends StatefulWidget {
@@ -31,7 +30,6 @@ class _PhotoBrowsePageState extends State<PhotoBrowsePage> {
   ];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     // widget.images = images;
     currentIndex = widget.initIndex;

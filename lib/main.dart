@@ -61,36 +61,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         designSize: Size(375, 812),
-        builder: () => MaterialApp(
-              debugShowCheckedModeBanner: false,
-              theme: ThemeData(
-                useMaterial3: true,
-                // 背景颜色 画板颜色
-                scaffoldBackgroundColor: Color.fromRGBO(249, 249, 249, 1.0),
-              ),
-              builder: EasyLoading.init(),
-              routes: {
-                "home_page": (context) => HomePage(),
-                "login_page": (context) => LoginPage(key: UniqueKey()),
-                "index_page": (context) => IndexPage(key: UniqueKey()),
-                "category_page": (context) => CategoryPage(),
-                "shopping_cart_page": (context) => ShoppingCartPage(),
-                "person_page": (context) => PersonPage(),
-                "user_server_protocol_page": (context) =>
-                    UserServerProtocolPage(),
-                "privacy_policy_page": (context) => PrivacyPolicyPage(),
-                "infinite_list_view": (context) => InfiniteListView(),
-                "google_register_page": (context) => GoogleRegisterPage(),
-                "google_login_page": (context) => GoogleLoginPage(),
-                "setting_page": (context) => SettingPage(),
-                "splash_page": (context) => SplashPage(),
-                "HomeSearchListPage": ((context) => HomeSearchListPage(
-                      key: UniqueKey(),
-                      productName: "",
-                    )),
-                "PhotoBrowsePage": (context) => PhotoBrowsePage()
-              },
-              initialRoute: "google_register_page",
-            ));
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              useMaterial3: true,
+              // 背景颜色 画板颜色
+              scaffoldBackgroundColor: Color.fromRGBO(249, 249, 249, 1.0),
+            ),
+            builder: EasyLoading.init(),
+            routes: {
+              "home_page": (context) => HomePage(),
+              "login_page": (context) => LoginPage(key: UniqueKey()),
+              "index_page": (context) => IndexPage(key: UniqueKey()),
+              "category_page": (context) => CategoryPage(),
+              "shopping_cart_page": (context) => ShoppingCartPage(),
+              "person_page": (context) => PersonPage(),
+              "user_server_protocol_page": (context) =>
+                  UserServerProtocolPage(),
+              "privacy_policy_page": (context) => PrivacyPolicyPage(),
+              "infinite_list_view": (context) => InfiniteListView(),
+              "google_register_page": (context) => GoogleRegisterPage(),
+              "google_login_page": (context) => GoogleLoginPage(),
+              "setting_page": (context) => SettingPage(),
+              "splash_page": (context) => SplashPage(),
+              "HomeSearchListPage": ((context) => HomeSearchListPage(
+                    key: UniqueKey(),
+                    productName: "",
+                  )),
+              "PhotoBrowsePage": (context) => PhotoBrowsePage()
+            },
+            initialRoute: "google_register_page",
+          );
+        });
   }
 }
