@@ -3,6 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mall/Splash.dart';
 import 'package:mall/category/Category.dart';
+import 'package:mall/codeFun/codeFun.dart';
 import 'package:mall/home/Home.dart';
 import 'package:mall/Index.dart';
 import 'package:mall/login/GoogleRegisterPage.dart';
@@ -18,6 +19,7 @@ import 'package:mall/testPage//InfiniteListView.dart';
 import 'package:mall/testPage/photoPage.dart';
 
 import 'login/GoogleLoginPage.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,19 +58,26 @@ void configLoading() {
 }
 
 class MyApp extends StatelessWidget {
+  static const List<Locale> supportLocaels = <Locale>[
+    Locale("en"),
+  ];
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // 解决中文日期问题 例如显示“周五“会异常
+    initializeDateFormatting('az');
+
     return ScreenUtilInit(
         designSize: Size(375, 812),
         builder: (context, child) {
           return MaterialApp(
-            debugShowCheckedModeBanner: false,
             theme: ThemeData(
               useMaterial3: true,
               // 背景颜色 画板颜色
               scaffoldBackgroundColor: Color.fromRGBO(249, 249, 249, 1.0),
             ),
+            debugShowCheckedModeBanner: false,
             builder: EasyLoading.init(),
             routes: {
               "home_page": (context) => HomePage(),
@@ -89,7 +98,8 @@ class MyApp extends StatelessWidget {
                     key: UniqueKey(),
                     productName: "",
                   )),
-              "PhotoBrowsePage": (context) => PhotoBrowsePage()
+              "PhotoBrowsePage": (context) => PhotoBrowsePage(),
+              "funCodePage": (context) => CodeFunPage()
             },
             initialRoute: "google_register_page",
           );
